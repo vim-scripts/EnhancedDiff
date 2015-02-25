@@ -1,0 +1,22 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=5121
+
+This plugin allows to make use of the Patience diff algorithm for generating diffs to use with Vim. This needs the git command line tool available.
+
+You can also customize you setup to use any other tool to generated diffs (e.g. mercurial) Read the help on how to configure the plugin accordingly.
+
+See the screenshots at https://github.com/chrisbra/vim-diff-enhanced
+
+This plugin defines the following Ex commands:
+
+:PatienceDiff - Use the Patience Diff algorithm for the next diff mode
+:CustomDiff <algorithm> - Use <algorithm> to generate the diff. Use any of
+
+    myers
+    default
+    histogram
+    patience
+
+After changing the algorithm, you need to run :diffupdate if you are in diff mode to regenerate the diff.
+Note: Those 2 commands use internally git to generate the diffs. Make sure you have at least git version 1.8.2 installed.
+
+:DisableEnhancedDiff - Disable plugin (and use default Vim diff capabilities).
